@@ -5,7 +5,7 @@
 - Communication between the `product` service and `order` service occurs through RabbitMQ, facilitated by two dedicated queues: `orders` and `products`, streamlining data exchange and enhancing scalability.
 - Within the architecture, the `product` service initiates communication by publishing data to the orders queue, subsequently consumed and processed by the `order` service for collation and further action.
 - Following the `order` processing, the `order` service publishes relevant details to the `product` queue, enabling the `product` service to retrieve and finalize `order` information, ensuring seamless transaction flow.
-- Automated through GitHub Actions, the CI workflow (`test.yml`) orchestrates testing procedures for the auth and product services, ensuring robust code quality and functionality validation upon every push or pull request event.
+- Automated through GitHub Actions, the CI workflow (`test.yml`) orchestrates testing procedures for the auth and product services, ensuring robust code quality and functionality validation upon every push or pull request event (commented)
 
 Tech Stack: Node.js, Express, MongoDB, Docker, RabbitMQ, Mocha, Chai
 
